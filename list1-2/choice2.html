@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)http://www.17sucai.com/preview/193248/2016-05-26/easyTab/index.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../css/icon.css">
+    <link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/base.css">
+
+ 	   <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <script type="text/javascript" src="../js/api.js"></script>
+
+</head>
+<body  style="height: 100%;" class="full-page">
+	<header class="aui-bar aui-bar-nav" id="aui-header">
+        <a class="aui-btn aui-pull-left" tapmode onclick="closeWin()">
+            <span class="aui-iconfont aui-icon-left"></span>
+        </a>
+        <div class="aui-title">k线选股规则</div>
+    </header>
+    
+    
+    
+    
+    <script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+        var header = $api.byId('aui-header');
+        $api.fixStatusBar(header);
+        var headerPos = $api.offset(header);
+        var body_h = $api.offset($api.dom('body')).h;
+        api.openFrame({
+            name: 'card_list_frm',
+            url: 'javascript:history.go(-1)',
+            
+            
+            bounces: true,
+            rect: {
+                x: 0,
+                y: headerPos.h,
+                w: 'auto',
+                h: 'auto'
+            }
+        })
+
+
+    };
+    function closeWin(){
+    	window.location.href="../index.html";
+    	//history.go(-1);
+
+        api.closeWin({
+        });
+    }
+</script>
+	
+	
+	
+	
+	
+	<div class="aui-content aui-margin-b-15">
+        <ul class="aui-list aui-list-in">
+           <!--
+           	作者：920988751@qq.com
+           	时间：2017-12-17
+           	描述：
+           	<li class="aui-list-header">
+                简单的列表布局
+            </li>
+
+           -->    
+         <li class="aui-list-item">
+                <div class="aui-list-item-inner aui-list-item-title aui-text-purple">
+                    1.看当前的位置是否过高，过高的不选。
+                </div>
+         </li>
+            
+             <li class="aui-list-item">
+                <div class="aui-list-item-inner aui-list-item-title aui-text-purple">
+                    2.看当前几天高位的k线的上影线是否过长，过长的不选。
+                </div>
+         </li>
+          <li class="aui-list-item">
+                <div class="aui-list-item-inner aui-list-item-title aui-text-purple">
+                    3.看当前的位置的k线的下影线是否过长，过长的不选，十字星的除外。
+                </div>
+         </li>
+          <li class="aui-list-item">
+                <div class="aui-list-item-inner aui-list-item-title aui-text-purple">
+                    4.看当前十几天内是否有大阴线，有大阴线的不选。
+                </div>
+         </li>
+          
+
+         
+        </ul>
+    </div>
+    
+    
+</body>
+</html>
+
